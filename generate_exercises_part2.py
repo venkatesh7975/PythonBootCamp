@@ -248,55 +248,84 @@ s = "Python"
 print(len(s)) # 6
 """)
 
-create_file(m4, "99_Practice_Problems.py", """# ==========================================
-# MODULE 4: PRACTICE PROBLEMS
-# ==========================================
-# 1. Ask user for their name and print it in ALL CAPS.
-# 2. Check if the string "apple" contains the letter "e".
-# 3. Reverse the user's input string.
-# 4. Count how many distinct words are in "The quick brown fox jumps".
-# 5. Extract "World" from "Hello World" using slicing.
-# 6. Replace spaces with underscores in "File Name With Spaces".
-# 7. Check if a string starts with "Py" (startswith method).
-# 8. Check if a user input is purely numbers (isnumeric method).
-# 9. Format a string print: "Item: [item], Price: $[price]".
-# 10. Split "192.168.1.1" by dot.
-# 11. Remove leading zeros from "000123".
-# 12. Create a palindrome check (is "racecar" == reversed "racecar"?).
-# 13. Given s="abcdef", print every 2nd character.
-# 14. Capitalize only the first letter of "python" (capitalize method).
-# 15. Check if "  " is just whitespace (isspace).
-# 16. Find the position of the second "o" in "Google".
-# 17. Print a string 5 times using multiplication ("Na" * 5).
-# 18. Escape a single quote inside a single quoted string.
-# 19. Join ["A", "B", "C"] with "->".
-# 20. Slice out the *last* 3 characters of any input string.
+create_file(m4, "99_Practice_Problems.py", """# Interactive Practice Problems - Module 4 (Strings)
+import time
 
-# ==========================================
-# SOLUTIONS
-# ==========================================
-'''
-1. print(input().upper())
-2. print("e" in "apple")
-3. s=input(); print(s[::-1])
-4. s="The quick..."; print(len(s.split()))
-5. s="Hello World"; print(s[6:])
-6. print("...".replace(" ", "_"))
-7. print(s.startswith("Py"))
-8. print(s.isnumeric())
-9. print(f"Item: {item}, Price: ${price}")
-10. print("192.168.1.1".split("."))
-11. print("000123".lstrip("0"))
-12. s="racecar"; print(s == s[::-1])
-13. print(s[::2])
-14. print("python".capitalize())
-15. print("  ".isspace())
-16. s="Google"; first=s.find("o"); print(s.find("o", first+1))
-17. print("Na"*5)
-18. print('It\\'s me')
-19. print("->".join(L))
-20. print(s[-3:])
-'''
+def quiz():
+    print("Welcome to the Module 4 Practice Quiz! (Strings)")
+    print("Press Enter to reveal the answer to each question.")
+    print("-" * 50)
+    
+    questions = [
+        ("Ask user for their name and print it in ALL CAPS.", 
+         "print(input().upper())"),
+         
+        ("Check if the string 'apple' contains the letter 'e'.", 
+         "print('e' in 'apple')"),
+         
+        ("Reverse the user's input string.", 
+         "s=input(); print(s[::-1])"),
+         
+        ("Count how many distinct words are in 'The quick brown fox jumps'.", 
+         "s='The quick...'; print(len(s.split()))"),
+         
+        ("Extract 'World' from 'Hello World' using slicing.", 
+         "s='Hello World'; print(s[6:])"),
+         
+        ("Replace spaces with underscores in 'File Name With Spaces'.", 
+         "print('...'.replace(' ', '_'))"),
+         
+        ("Check if a string starts with 'Py' (startswith method).", 
+         "print(s.startswith('Py'))"),
+         
+        ("Check if a user input is purely numbers (isnumeric method).", 
+         "print(s.isnumeric())"),
+         
+        ("Format a string print: 'Item: [item], Price: $[price]'.", 
+         "print(f'Item: {item}, Price: ${price}')"),
+         
+        ("Split '192.168.1.1' by dot.", 
+         "print('192.168.1.1'.split('.'))"),
+         
+        ("Remove leading zeros from '000123'.", 
+         "print('000123'.lstrip('0'))"),
+         
+        ("Create a palindrome check (is 'racecar' == reversed 'racecar'?).", 
+         "s='racecar'; print(s == s[::-1])"),
+         
+        ("Given s='abcdef', print every 2nd character.", 
+         "print(s[::2])"),
+         
+        ("Capitalize only the first letter of 'python' (capitalize method).", 
+         "print('python'.capitalize())"),
+         
+        ("Check if '  ' is just whitespace (isspace).", 
+         "print('  '.isspace())"),
+         
+        ("Find the position of the second 'o' in 'Google'.", 
+         "s='Google'; first=s.find('o'); print(s.find('o', first+1))"),
+         
+        ("Print a string 5 times using multiplication ('Na' * 5).", 
+         "print('Na'*5)"),
+         
+        ("Escape a single quote inside a single quoted string.", 
+         "print('It\\\\'s me')"),
+         
+        ("Join ['A', 'B', 'C'] with '->'.", 
+         "print('->'.join(L))"),
+         
+        ("Slice out the *last* 3 characters of any input string.", 
+         "print(s[-3:])")
+    ]
+    
+    for i, (q, a) in enumerate(questions, 1):
+        print(f"\\\\nQ{i}: {q}")
+        input("   Your Answer: ")
+        print(f"👉 Solution: {a}")
+        print("-" * 50)
+
+if __name__ == "__main__":
+    quiz()
 """)
 
 # ==========================================
@@ -607,55 +636,84 @@ import sys
 # sys.stdout.write("Hello\\n") # Faster than print
 """)
 
-create_file(m5, "99_Practice_Problems.py", """# ==========================================
-# MODULE 5: PRACTICE PROBLEMS
-# ==========================================
-# 1. Ask for age. Print "Adult" if >= 18, else "Minor".
-# 2. Loop from 1 to 100. Print only numbers divisible by 7.
-# 3. Ask for a password. Keep asking until user types "secret".
-# 4. Print the multiplication table of 5 (5, 10... 50).
-# 5. Calculate factorial of 5 using a for loop.
-# 6. Sum all numbers in defined list `L`.
-# 7. Find the maximum number in list `L` without using max().
-# 8. Print a checkerboard pattern (3x3 grid of X and O).
-# 9. Write a calculator that asks for Num1, Op, Num2.
-# 10. Count vowels in a user input string.
-# 11. Print the Fibonacci sequence up to 10 terms.
-# 12. Check if a number is Prime.
-# 13. Reverse a number using math (not strings). 123 -> 321.
-# 14. Input 3 numbers and sort them using If/Else (no sort()).
-# 15. FizzBuzz: Print 1-20. Mul of 3->"Fizz", 5->"Buzz", Both->"FizzBuzz".
-# 16. Extract all digits from "abc123xyz" and sum them.
-# 17. Guess the Number game (Logic only).
-# 18. Pattern Printing: Pyramid of stars.
-# 19. Validate email input (must contain @ and .).
-# 20. Count how many uppercase letters are in a string.
+create_file(m5, "99_Practice_Problems.py", """# Interactive Practice Problems - Module 5 (Control Flow)
+import time
 
-# ==========================================
-# SOLUTIONS
-# ==========================================
-'''
-1. if int(input()) >= 18...
-2. for i in range(1,101): if i%7==0: print(i)
-3. while input() != "secret": pass
-4. for i in range(1, 11): print(5*i)
-5. f=1; for i in range(1,6): f*=i
-6. total=0; for x in L: total+=x
-7. m=L[0]; for x in L: if x>m: m=x
-8. nested loop (row%2, col%2)
-9. n1=..; op=..; n2=..; if op==...
-10. count=0; for c in s: if c in "aeiou": count+=1
-11. a,b=0,1; loop 10: print(a); a,b=b,a+b
-12. is_prime and loop 2..n-1
-13. rev=0; while n>0: rev=rev*10 + n%10; n//=10
-14. nested logic or swap
-15. if i%15==0.. elif i%3==0..
-16. sum(int(c) for c in s if c.isdigit())
-17. while guess != secret...
-18. for i in range(n): print(" "*(n-i) + "*"*(2*i+1))
-19. if "@" in s and "." in s...
-20. count=0; for c in s: if c.isupper(): count+=1
-'''
+def quiz():
+    print("Welcome to the Module 5 Practice Quiz! (Control Flow)")
+    print("Press Enter to reveal the answer to each question.")
+    print("-" * 50)
+    
+    questions = [
+        ("Ask for age. Print 'Adult' if >= 18, else 'Minor'.", 
+         "if int(input()) >= 18..."),
+         
+        ("Loop from 1 to 100. Print only numbers divisible by 7.", 
+         "for i in range(1,101): if i%7==0: print(i)"),
+         
+        ("Ask for a password. Keep asking until user types 'secret'.", 
+         "while input() != 'secret': pass"),
+         
+        ("Print the multiplication table of 5 (5, 10... 50).", 
+         "for i in range(1, 11): print(5*i)"),
+         
+        ("Calculate factorial of 5 using a for loop.", 
+         "f=1; for i in range(1,6): f*=i"),
+         
+        ("Sum all numbers in defined list `L`.", 
+         "total=0; for x in L: total+=x"),
+         
+        ("Find the maximum number in list `L` without using max().", 
+         "m=L[0]; for x in L: if x>m: m=x"),
+         
+        ("Print a checkerboard pattern (3x3 grid of X and O).", 
+         "nested loop (row%2, col%2)"),
+         
+        ("Write a calculator that asks for Num1, Op, Num2.", 
+         "n1=..; op=..; n2=..; if op==..."),
+         
+        ("Count vowels in a user input string.", 
+         "count=0; for c in s: if c in 'aeiou': count+=1"),
+         
+        ("Print the Fibonacci sequence up to 10 terms.", 
+         "a,b=0,1; loop 10: print(a); a,b=b,a+b"),
+         
+        ("Check if a number is Prime.", 
+         "is_prime and loop 2..n-1"),
+         
+        ("Reverse a number using math (not strings). 123 -> 321.", 
+         "rev=0; while n>0: rev=rev*10 + n%10; n//=10"),
+         
+        ("Input 3 numbers and sort them using If/Else (no sort()).", 
+         "nested logic or swap"),
+         
+        ("FizzBuzz: Print 1-20. Mul of 3->'Fizz', 5->'Buzz', Both->'FizzBuzz'.", 
+         "if i%15==0.. elif i%3==0.."),
+         
+        ("Extract all digits from 'abc123xyz' and sum them.", 
+         "sum(int(c) for c in s if c.isdigit())"),
+         
+        ("Guess the Number game (Logic only).", 
+         "while guess != secret..."),
+         
+        ("Pattern Printing: Pyramid of stars.", 
+         "for i in range(n): print(' '*(n-i) + '*'*(2*i+1))"),
+         
+        ("Validate email input (must contain @ and .).", 
+         "if '@' in s and '.' in s..."),
+         
+        ("Count how many uppercase letters are in a string.", 
+         "count=0; for c in s: if c.isupper(): count+=1")
+    ]
+    
+    for i, (q, a) in enumerate(questions, 1):
+        print(f"\\\\nQ{i}: {q}")
+        input("   Your Answer: ")
+        print(f"👉 Solution: {a}")
+        print("-" * 50)
+
+if __name__ == "__main__":
+    quiz()
 """)
 
 print("Generated Modules 4 & 5!")
