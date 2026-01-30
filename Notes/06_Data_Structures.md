@@ -108,4 +108,62 @@ print(scores["Charlie"])
 **A:** Because it left its Windows open! 🪟❄️
 
 ---
+
+## 🏆 Challenge Mode: 20 Practice Problems
+
+### 🧠 Conceptual (Multiple Choice & Short Answer)
+
+1.  **Mutability**: Which of these is Immutable? List, Set, Dictionary, Tuple.
+2.  **Order**: Does a Set keep items in the order you added them?
+3.  **Duplicates**: If you add "Apple" twice to a Set, how many "Apple"s are there?
+4.  **Syntax**: Which brackets does a List use?
+5.  **Access**: How do you access the value associated with key "Age" in dict `d`?
+6.  **Method**: What list method adds an item to the end?
+7.  **Key Type**: Can a List be a key in a Dictionary? (Hint: Keys must be immutable).
+8.  **Empty**: How do you create an empty Tuple?
+9.  **LIFO**: Lists can act as a Stack. What method removes the last element?
+10. **Conversion**: How do you turn a List `L` into a Set?
+
+### 💻 Coding Challenges
+
+11. **List Access**: Print the 2nd item of `L = [10, 20, 30]`.
+12. **Dict Add**: Add `{"City": "Paris"}` to existing dict `person`.
+13. **Set Unique**: Given `L = [1, 1, 2, 2, 3]`, print the unique numbers.
+14. **Tuple Unpack**: Given `t = (10, 20)`, assign them to `x` and `y` in one line.
+15. **List Change**: Change the first item of `L = ["A", "B"]` to "Z".
+16. **Dict Check**: Check if "Score" is a key in `d = {"Name": "Ash"}`.
+17. **List Slicing**: Print the last 2 items of `L = [1, 2, 3, 4, 5]`.
+18. **Nested Access**: Given `data = {"User": {"Name": "Sam"}}`, print "Sam".
+19. **List Math**: Multiply every number in `[1, 2, 3]` by 2 and print the new list.
+20. **Merge**: Combine two lists `A = [1, 2]` and `B = [3, 4]` into one.
+
+<details>
+<summary><strong>⬇️ Click to Reveal Solutions</strong></summary>
+
+**Conceptual Answers**
+1. Tuple.
+2. No.
+3. One.
+4. Square `[]`.
+5. `d["Age"]`.
+6. `.append()`.
+7. No (because Lists are mutable).
+8. `()` or `tuple()`.
+9. `.pop()`.
+10. `set(L)`.
+
+**Coding Answers**
+11. `print(L[1])`.
+12. `person["City"] = "Paris"`.
+13. `print(list(set(L)))`.
+14. `x, y = t`.
+15. `L[0] = "Z"`.
+16. `if "Score" in d: ...`.
+17. `print(L[-2:])`.
+18. `print(data["User"]["Name"])`.
+19. `new_L = [x*2 for x in [1, 2, 3]]` (List Comprehension) or loop.
+20. `C = A + B`.
+</details>
+
+---
 **Next Up:** We learn how to automate tasks with **Functions**! 🤖

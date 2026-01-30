@@ -111,4 +111,66 @@ while count <= 5:
 **A:** When the computer yells back at you! 📢
 
 ---
+
+## 🏆 Challenge Mode: 20 Practice Problems
+
+### 🧠 Conceptual (Multiple Choice & Short Answer)
+
+1.  **Analogy**: If Programming is "Construction", what is "Software"?
+2.  **Difference**: Explain the difference between Python and Microsoft Word in one sentence.
+3.  **True or False**: You can touch Software.
+4.  **Hardware Check**: Which of these is NOT hardware?
+    *   a) CPU
+    *   b) Windows
+    *   c) Hard Drive
+    *   d) Mouse
+5.  **Role Play**: You are an Interpreter. Do you translate the whole book at once or line-by-line?
+6.  **Definition**: What is "Machine Code"?
+7.  **Hierarchy**: Arrange from Low Level to High Level: `[Python, Machine Code, C, Assembly]`.
+8.  **Why Python?**: Why does Python use an Interpreter instead of a Compiler?
+9.  **Origin Story**: What language is Python written in?
+10. **Debug**: Which is easier to debug: Compiled code or Interpreted code? Why?
+
+### 💻 Logic & Transformation Challenges
+
+11. **Translation**: Translate this English logic to a loose code format: "If hungry, eat. Else, sleep."
+12. **Binary**: Computers speak 0s and 1s. If `A=1`, `B=2`, `C=3`, write "CAB" in numbers.
+13. **Sequence**: `Input -> ??? -> Output`. What goes in the middle?
+14. **Hardware Logic**: If you unplug the Monitor, does the Software stop running?
+15. **Software Logic**: If you uninstall Chrome, does the Monitor break?
+16. **Compiler**: You found an error on Page 99 of a 100-page book. As a Compiler, what do you do?
+17. **Interpreter**: You found an error on Line 1. As an Interpreter, do you run Line 2?
+18. **Flow**: `Source Code -> Compiler -> ???`. What is the result called? (Executable/Binary).
+19. **Creativity**: If you could invent a new programming language, what would you name it and why?
+20. **Scenario**: Your program runs super fast but is hard to fix. Is it likely Compiled or Interpreted?
+
+<details>
+<summary><strong>⬇️ Click to Reveal Solutions</strong></summary>
+
+**Conceptual Answers**
+1. The Building/Final Product.
+2. Python is a language to create software; Word is the software itself.
+3. False.
+4. b) Windows.
+5. Line-by-line.
+6. Binary (0s and 1s) that the CPU reads.
+7. Machine Code -> Assembly -> C -> Python.
+8. For developer speed and simplicity.
+9. C Language.
+10. Interpreted. because it stops at the exact error line immediately.
+
+**Logic Answers**
+11. `if hungry: eat()` `else: sleep()`.
+12. 3 1 2.
+13. Processing / CPU / Algorithm.
+14. No (It just isn't displayed).
+15. No.
+16. Rewrite/Retranslate the *entire* book.
+17. No, stop immediately.
+18. Executable (or Machine Code).
+19. Subjective (e.g., "Simplicon").
+20. Compiled.
+</details>
+
+---
 **Next Up:** We start writing actual Python code! Get your keyboards ready. 🎹

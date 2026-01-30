@@ -124,4 +124,62 @@ It calculated `2 + (3/2)` -> `2 + 1.5` -> `3.5`.
 (Octal 31 equals Decimal 25)
 
 ---
+
+## 🏆 Challenge Mode: 20 Practice Problems
+
+### 🧠 Conceptual (Multiple Choice & Short Answer)
+
+1.  **Valid Variable?**: Is `1st_prize` a valid variable name? Why?
+2.  **Case Sensitivity**: Are `Score` and `score` the same variable?
+3.  **Type Check**: What function do you use to find out if a variable is an Integer or a String?
+4.  **Math**: What is the result of `10 / 3` in Python? (Exact output).
+5.  **Math**: What is the result of `10 // 3` in Python?
+6.  **Comparison**: `5 == "5"` -> True or False?
+7.  **Logic**: `True and False` evaluates to?
+8.  **Typecasting**: What happens if you run `int("Hello")`?
+9.  **Modulo**: What is `20 % 6`?
+10. **Convention**: Which variable name is better: `n` or `user_age`?
+
+### 💻 Coding Challenges
+
+11. **Swap**: Write code to swap two variables `a = 5`, `b = 10` so `a` becomes 10 and `b` becomes 5.
+12. **Circle Area**: Calculate area of a circle where `radius = 5` and `pi = 3.14159`. Print it.
+13. **F to C**: Convert 100°F to Celsius. Formula: `(F - 32) * 5/9`.
+14. **Quadratic**: Calculate `x` for `y = ax^2 + bx + c` where `a=2, b=3, c=1, x=5`.
+15. **Even/Odd (No If)**: Use Modulo `%` to find the remainder of `17` divided by `2`.
+16. **Power**: Calculate `2` to the power of `10`.
+17. **Casting**: Convert the float `9.99` to an integer. What is the value?
+18. **Logic Puzzle**: `(5 > 3) and (2 < 4) or (not True)`. What is the result?
+19. **Remainder**: Distribute 100 apples to 3 people. How many are left over?
+20. **String Math**: What is `"10" + "10"`?
+
+<details>
+<summary><strong>⬇️ Click to Reveal Solutions</strong></summary>
+
+**Conceptual Answers**
+1. No. Cannot start with a number.
+2. No. Python is case-sensitive.
+3. `type()`.
+4. `3.3333333333333335` (Float).
+5. `3` (Integer).
+6. False. Int is not equal to String.
+7. False.
+8. `ValueError`.
+9. 2.
+10. `user_age` (More descriptive).
+
+**Coding Answers**
+11. `temp = a; a = b; b = temp` OR `a, b = b, a`.
+12. `area = 3.14159 * (5 ** 2)` -> `78.53975`.
+13. `(100 - 32) * 5/9` -> `37.77...`.
+14. `2*(5**2) + 3*5 + 1` -> `50 + 15 + 1` -> `66`.
+15. `17 % 2` -> `1` (It is Odd).
+16. `2 ** 10` -> `1024`.
+17. `int(9.99)` -> `9`.
+18. `True and True or False` -> `True`.
+19. `100 % 3` -> `1`.
+20. `"1010"` (String Concatenation).
+</details>
+
+---
 **Next Up:** We learn how to handle text with **Strings**! 🧵
