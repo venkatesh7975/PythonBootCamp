@@ -52,4 +52,52 @@ demonstrate_error("KeyError", lambda: {"name": "Alice"}["age"])
 # SCENARIO: Trying to use .append() (which is for lists) on an integer.
 demonstrate_error("AttributeError", lambda: (10).append(5))
 
+# 8. ModuleNotFoundError
+# WHEN: Trying to import a module that isn't installed or doesn't exist.
+# SCENARIO: Mistyping 'pandas' as 'pands'.
+demonstrate_error("ModuleNotFoundError", lambda: __import__("non_existent_module"))
+
+# 9. FileNotFoundError
+# WHEN: Trying to open a file that doesn't exist in the specified path.
+# SCENARIO: Forgetting to create 'data.txt' before reading it.
+demonstrate_error("FileNotFoundError", lambda: open("ghost_file.txt", "r"))
+
+# 10. OverflowError
+# WHEN: A calculation exceeds the maximum limit for a numeric type (less common with Python ints, but happens in math library).
+# SCENARIO: Calculating an extremely large exponent.
+import math
+demonstrate_error("OverflowError", lambda: math.exp(1000))
+
+# 11. RecursionError
+# WHEN: A function calls itself too many times, exceeding the maximum recursion depth.
+# SCENARIO: A recursive function that forgets its "base case" (where to stop).
+def infinite_recursion():
+    return infinite_recursion()
+demonstrate_error("RecursionError", lambda: infinite_recursion())
+
+# 12. StopIteration
+# WHEN: The next() function is called on an iterator that has no more items.
+# SCENARIO: Manually stepping through a list and going past the last item.
+demonstrate_error("StopIteration", lambda: next(iter([1]))) # Calling next twice would trigger it
+# To trigger it clearly:
+def trigger_stop_iteration():
+    i = iter([1])
+    next(i)
+    next(i)
+demonstrate_error("StopIteration", trigger_stop_iteration)
+
+# 13. AssertionError
+# WHEN: An 'assert' statement fails (the condition is False).
+# SCENARIO: Checking if a password is long enough, and it isn't.
+def trigger_assertion():
+    assert 1 == 2, "One does not equal two!"
+demonstrate_error("AssertionError", trigger_assertion)
+
+# 14. NotImplementedError
+# WHEN: An abstract method that is supposed to be overridden in a subclass is called.
+# SCENARIO: A base class defines 'save()' but doesn't implement it yet.
+def trigger_not_implemented():
+    raise NotImplementedError("This feature is coming soon!")
+demonstrate_error("NotImplementedError", trigger_not_implemented)
+
 print("--- End of Runtime Errors Demo ---")

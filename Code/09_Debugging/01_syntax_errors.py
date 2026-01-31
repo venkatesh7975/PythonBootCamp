@@ -59,15 +59,89 @@ my_function()
 # 4. Keyword Typos / Invalid Syntax (SyntaxError)
 # -----------------------------------------------------------------------------
 # WHAT: Misspelling reserved Python keywords (for, while, import, etc.).
-# WHY: Python doesn't recognize the typo as a command it knows.
-# WHEN: Typos are inevitable; look for "invalid syntax" pointing to the typo.
 
 # Incorrect:
 # forr i in range(5):
 #     print(i)
 
 # Correct:
-for i in range(2):
-    print(f"Correct: Fixed 'for' keyword typo. Loop iteration: {i}")
+for i in range(1):
+    print(f"Correct: Fixed 'for' keyword typo.")
+
+# -----------------------------------------------------------------------------
+# 5. Assignment vs Equality (SyntaxError)
+# -----------------------------------------------------------------------------
+# WHAT: Using '=' (assignment) inside an 'if' statement instead of '==' (equality).
+# WHY: '=' is for giving a variable a value; '==' is for comparing two values.
+# SCENARIO: Trying to check if a user's role is 'admin'.
+
+# Incorrect:
+# if user_role = "admin":
+#     print("Access granted")
+
+# Correct:
+user_role = "guest"
+if user_role == "admin":
+    print("Welcome Admin")
+else:
+    print("Correct: Used '==' for comparison.")
+
+# -----------------------------------------------------------------------------
+# 6. Invalid Identifiers (SyntaxError)
+# -----------------------------------------------------------------------------
+# WHAT: Naming a variable starting with a number or using invalid characters.
+# WHY: Python variable names must start with a letter or underscore.
+
+# Incorrect:
+# 1st_place = "Gold"
+
+# Correct:
+first_place = "Gold"
+print(f"Correct: Variable name starts with a letter: {first_place}")
+
+# -----------------------------------------------------------------------------
+# 7. Break/Continue/Return Outside Allowed Scope (SyntaxError)
+# -----------------------------------------------------------------------------
+# WHAT: Using 'break' or 'continue' outside a loop, or 'return' outside a function.
+# WHY: These keywords have specific jobs that only make sense in certain contexts.
+
+# Incorrect:
+# break 
+# return 10
+
+# Correct:
+def get_number():
+    return 10  # Correct: 'return' is inside a function.
+
+for x in range(1):
+    break      # Correct: 'break' is inside a loop.
+
+print("Correct: Break and Return used in proper contexts.")
+
+# -----------------------------------------------------------------------------
+# 8. Mismatched Quotes (SyntaxError)
+# -----------------------------------------------------------------------------
+# WHAT: Starting a string with ' and ending with " or vice versa.
+# SCENARIO: Forgetting which quote you started with in a long string.
+
+# Incorrect:
+# my_string = "Hello'
+
+# Correct:
+my_string = "Hello"
+print(f"Correct: Quotes match: {my_string}")
+
+# -----------------------------------------------------------------------------
+# 9. Literal Structure Errors (SyntaxError)
+# -----------------------------------------------------------------------------
+# WHAT: Commas in the wrong place or missing values in a list/dict literal.
+# WHY: Python expects a specific pattern for data structures.
+
+# Incorrect:
+# my_list = [1, 2,, 3]
+
+# Correct:
+my_list = [1, 2, 3]
+print(f"Correct: List structure is valid: {my_list}")
 
 print("\n--- Syntax Errors Demo Complete ---")
