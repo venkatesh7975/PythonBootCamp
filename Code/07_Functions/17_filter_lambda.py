@@ -7,3 +7,5 @@
 nums = [1, -1, 2, -5]
 positives = list(filter(lambda x: x > 0, nums))
 print(positives) #[1, 2]
+
+print(list(filter(lambda x: x< 0, nums)))  
